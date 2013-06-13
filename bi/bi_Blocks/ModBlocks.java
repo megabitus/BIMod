@@ -28,8 +28,8 @@ public class ModBlocks{
 	public static Block GlowingLeaves;
 	public static Block GlowingPlank;
 	public static Block NuggetOre;
-	public static Block multiFurnaceCore = null;
-	public static Block multiFurnaceDummy = null;
+	public static Block MultiPart;
+	public static Block PoC;
 
 	public static void init() {
 		StarSky = new StarSky(BiIds.StarSkyID, 1).setUnlocalizedName("StarSky");
@@ -49,16 +49,8 @@ public class ModBlocks{
 		GlowingLeaves = new GlowingLeaves(BiIds.GlowingLeavesID).setUnlocalizedName("GlowingLeaves").setLightValue(1F);
 		GlowingPlank = new GlowingPlank(BiIds.GlowingPlankID, 1).setUnlocalizedName("GlowingPlank").setLightValue(1F);
 		NuggetOre = new NuggetOre(BiIds.NuggetOreID, 1).setUnlocalizedName("NuggetOre").setLightValue(1F);
-		
-		
-		multiFurnaceCore = new BlockMultiFurnaceCore(3975);
-		multiFurnaceDummy = new BlockMultiFurnaceDummy(3976);
-		
-		GameRegistry.registerBlock(multiFurnaceCore, "blockMultiFurnaceCore");
-		GameRegistry.registerBlock(multiFurnaceDummy, "blockMultiFurnaceDummy");
-		
-		LanguageRegistry.addName(multiFurnaceCore, "Multi-Furnace Core");
-		LanguageRegistry.addName(multiFurnaceDummy, "Multi-Furnace Dummy");
+		MultiPart = new MultiPart(BiIds.MultiPartID).setUnlocalizedName("MultiPart").setLightValue(1F);
+		PoC = new PoC(BiIds.PoCID, 9).setUnlocalizedName("PoC").setLightValue(1F);
 	}
 
 }

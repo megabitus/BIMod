@@ -1,6 +1,7 @@
 package bi.bi_gui;
 
 import bi.bi_Blocks.ModBlocks;
+import bi.bi_Blocks.TileEntityCrafter;
 import bi.bi_Registers.CCraftingManager;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
@@ -52,6 +53,35 @@ public class ContainerC extends Container
 		for (var6 = 0; var6 < 9; ++var6)
 		{
 			this.addSlotToContainer(new Slot(par1InventoryPlayer, var6, 8 + var6 * 18, 142));
+		}
+
+		this.onCraftMatrixChanged(this.craftMatrix);
+	}
+
+	public ContainerC(InventoryPlayer inventory, TileEntityCrafter tileEntity) {
+		this.addSlotToContainer(new SlotCraftingC(inventory.player, this.craftMatrix, this.craftResult, 0, 124, 35));
+		int var6;
+		int var7;
+
+		for (var6 = 0; var6 < 3; ++var6)
+		{
+			for (var7 = 0; var7 < 3; ++var7)
+			{
+				this.addSlotToContainer(new Slot(this.craftMatrix, var7 + var6 * 3, 30 + var7 * 18, 17 + var6 * 18));
+			}
+		}
+
+		for (var6 = 0; var6 < 3; ++var6)
+		{
+			for (var7 = 0; var7 < 9; ++var7)
+			{
+				this.addSlotToContainer(new Slot(inventory, var7 + var6 * 9 + 9, 8 + var7 * 18, 84 + var6 * 18));
+			}
+		}
+
+		for (var6 = 0; var6 < 9; ++var6)
+		{
+			this.addSlotToContainer(new Slot(inventory, var6, 8 + var6 * 18, 142));
 		}
 
 		this.onCraftMatrixChanged(this.craftMatrix);

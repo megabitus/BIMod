@@ -25,6 +25,7 @@ public class Recipes {
 		GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.GlowingLog, 1), new ItemStack(Block.wood,OreDictionary.WILDCARD_VALUE), new ItemStack(ModItems.GlowstoneNugget));
 		GameRegistry.addRecipe(new ItemStack(ModItems.GlowstoneNugget, 1), new Object []{"NNN", "NNN", "NNN", Character.valueOf('N'), ModItems.NuggetDust});
 		GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.GlowingPlank, 4), new ItemStack(ModBlocks.GlowingLog));
+		GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.PoC, 2), new ItemStack(ModBlocks.GlowingLog),new ItemStack(Item.dyePowder,1,2));
 	}
 
 }

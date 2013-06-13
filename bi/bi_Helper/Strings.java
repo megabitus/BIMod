@@ -36,6 +36,8 @@ public class Strings
 	public static final String GLOWING_ORE = "NuggetOre";
 	public static final String NUGGET_RAW_DUST = "NuggetRawDust";
 	public static final String NUGGET_DUST = "NuggetDust";
+	public static final String P_O_C = "PoC";
+	public static final String MULTI_PART= "MultiPart";
 	
 
 }

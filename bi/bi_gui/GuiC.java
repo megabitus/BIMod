@@ -7,6 +7,8 @@ import net.minecraft.world.World;
 
 import org.lwjgl.opengl.GL11;
 
+import bi.bi_Blocks.TileEntityCrafter;
+
 
 public class GuiC extends GuiContainer
 {
@@ -14,6 +16,10 @@ public class GuiC extends GuiContainer
 	public GuiC(InventoryPlayer par1InventoryPlayer, World par2World, int par3, int par4, int par5)
 	{
 		super(new ContainerC(par1InventoryPlayer, par2World, par3, par4, par5));
+	}
+
+	public GuiC(InventoryPlayer inventory, TileEntityCrafter tileEntity) {
+		super(new ContainerC(inventory, tileEntity));
 	}
 
 	/**

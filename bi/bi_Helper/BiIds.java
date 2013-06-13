@@ -1,12 +1,9 @@
 package bi.bi_Helper;
 
+import net.minecraftforge.common.Property;
+
 public class BiIds {
-	public static class GUIIDs
-	{
-		public static int MultiGlowingSmelter = 0;
-	}
-	
-	
+	public static int DimensionID = 20;
 	public static int StarSkyID = 3940;
 	public static int StormmStoneID = 3941;
 	public static int ReinforcedStoneID = 3942;
@@ -42,6 +39,8 @@ public class BiIds {
 	public static int NuggetOreID = 3972;
 	public static int NuggetRawDustID = 3973;
 	public static int NuggetDustID = 3974;
+	public static int MultiPartID = 3975;
+	public static int PoCID = 3976;
 	
 
 }

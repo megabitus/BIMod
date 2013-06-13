@@ -64,6 +64,7 @@ public class CCraftingManager
 		this.addRecipe(new ItemStack(ModItems.GlowstoneNugget, 1), new Object []{"NNN", "NNN", "NNN", Character.valueOf('N'), ModItems.NuggetDust});
 		this.addRecipe(new ItemStack(ModBlocks.Stair, 4), new Object []{"NOO", "NNO", "NNN", Character.valueOf('N'), ModBlocks.GlowingPlank});
 		this.addShapelessRecipe(new ItemStack(Item.blazeRod, 2), new ItemStack(Item.blazePowder), new ItemStack(Item.stick));
+	    this.addShapelessRecipe(new ItemStack(ModBlocks.PoC, 3), new ItemStack(ModBlocks.GlowingLog),new ItemStack(Item.dyePowder,1,2));
 
 
 

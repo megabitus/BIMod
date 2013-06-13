@@ -1,11 +1,13 @@
 package bi.bi_Registers;
 
 import net.minecraft.src.ModLoader;
+import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
 import bi.bi_BasePackage.CommonProxy;
 import bi.bi_Blocks.ModBlocks;
 import bi.bi_Helper.BFuelHandler;
 import bi.bi_Helper.BIWorldGenerator;
+import bi.bi_Helper.BiIds;
 import bi.bi_Helper.BlockHandler;
 import bi.bi_Helper.EntityLaserMunition;
 import bi.bi_Helper.TileEntityGlowNuggetChest;
@@ -33,7 +35,7 @@ public class Registry {
 		LanguageRegistry.addName(ModBlocks.LittleGlowstone, "Little Glowstone");
 		GameRegistry.registerBlock(ModBlocks.LittleGlowstone, "Mod_LittleGlowstone");
 		GameRegistry.registerBlock(ModBlocks.Crafter, "Mod_Crafter");
-		LanguageRegistry.addName(ModBlocks.Crafter, "Crafter");
+		LanguageRegistry.addName(ModBlocks.Crafter, "Base Crafter");
 		GameRegistry.registerBlock(ModBlocks.Fence, "Mod_Fence");
 		LanguageRegistry.addName(ModBlocks.Fence, "GlowNugget Fence");
 		GameRegistry.registerBlock(ModBlocks.FenceGate, "Mod_FenceGate");
@@ -54,6 +56,8 @@ public class Registry {
 		LanguageRegistry.addName(ModBlocks.GlowingPlank, "Glowing Plank");
 		GameRegistry.registerBlock(ModBlocks.NuggetOre, "Mod_NuggetOre");
 		LanguageRegistry.addName(ModBlocks.NuggetOre, "Nugget Ore");
+		GameRegistry.registerBlock(ModBlocks.PoC, "Mod_PoC");
+		LanguageRegistry.addName(ModBlocks.PoC, "Part of Crafter");
 		//Items
 		LanguageRegistry.addName(ModItems.GlowstoneNugget, "Glowstone Nugget"); 
 		LanguageRegistry.addName(ModItems.NuggetSword, "Glowing Nugget Sword"); 
@@ -79,7 +83,6 @@ public class Registry {
 		GameRegistry.registerFuelHandler(new BFuelHandler());
 		RenderingRegistry.instance().registerBlockHandler(new BlockHandler());
 		GameRegistry.registerTileEntity(TileEntityGlowNuggetChest.class, "tileentitychest");
-		LanguageRegistry.instance().addStringLocalization("multifurnace.container.multifurnace", "Multi-Furnace");
 		//BlocksHarvestLevel
 		MinecraftForge.setBlockHarvestLevel(ModBlocks.StormmSand, "shovel", 0);
 		MinecraftForge.setBlockHarvestLevel(ModBlocks.Crafter, "axe", 1);

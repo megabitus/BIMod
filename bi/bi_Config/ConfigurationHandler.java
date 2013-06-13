@@ -37,6 +37,8 @@ public class ConfigurationHandler {
 			BiIds.GlowingLeavesID = configuration.getBlock(Strings.GLOWING_LEAVES, BiIds.GlowingLeavesID).getInt(BiIds.GlowingLeavesID);
 			BiIds.GlowingPlankID = configuration.getBlock(Strings.GLOWING_PLANK, BiIds.GlowingPlankID).getInt(BiIds.GlowingPlankID);
 			BiIds.NuggetOreID = configuration.getBlock(Strings.GLOWING_ORE, BiIds.NuggetOreID).getInt(BiIds.NuggetOreID);
+			BiIds.PoCID = configuration.getBlock(Strings.P_O_C, BiIds.PoCID).getInt(BiIds.PoCID);
+			BiIds.MultiPartID = configuration.getBlock(Strings.MULTI_PART, BiIds.MultiPartID).getInt(BiIds.MultiPartID);
 			/* Item configs */
 			BiIds.GlowstoneNuggetID = configuration.getItem(Strings.GLOWSTONE_NUGGET, BiIds.GlowstoneNuggetID).getInt(BiIds.GlowstoneNuggetID);
 			BiIds.NuggetSwordID = configuration.getItem(Strings.NUGGET_SWORD, BiIds.NuggetSwordID).getInt(BiIds.NuggetSwordID);
