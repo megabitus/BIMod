@@ -1,7 +1,7 @@
 package bi.bi_Items;
 
 import bi.bi_BasePackage.BaseClass;
-import bi.bi_Helper.EntityLaserMunition;
+import bi.bi_Entitys.EntityLaserMunition;
 import bi.bi_Helper.Reference;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.enchantment.Enchantment;

@@ -7,7 +7,7 @@ import net.minecraft.world.World;
 
 import org.lwjgl.opengl.GL11;
 
-import bi.bi_Blocks.TileEntityCrafter;
+import bi.bi_Entitys.TileEntityCrafter;
 
 
 public class GuiC extends GuiContainer

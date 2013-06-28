@@ -11,12 +11,11 @@ import net.minecraft.world.World;
 
 public class StarSky extends Block 
 {
-
 	public StarSky(int par1, int par2) 
 	{
 		super(par1, Material.wood);
 		this.setCreativeTab(BaseClass.BITab);
-		this.setHardness(2F);
+		this.setHardness(1.4F);
 	}
 	public void onEntityWalking(World world,  int xPos, int zPos, int yPos, Entity entity)
 	{

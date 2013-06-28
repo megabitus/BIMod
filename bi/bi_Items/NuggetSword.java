@@ -16,11 +16,6 @@ public class NuggetSword extends ItemSword
 		super(itemID, toolMaterial);
 		this.setCreativeTab(BaseClass.BITab);
 	}
-	@SideOnly(Side.CLIENT)
-	public boolean hasEffect(ItemStack par1ItemStack)
-	{
-		return true;
-	}
 	public void updateIcons(IconRegister par1IconRegister)
     {
         this.itemIcon = par1IconRegister.registerIcon(Reference.MOD_NAME + ":" + this.getUnlocalizedName());

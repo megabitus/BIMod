@@ -33,8 +33,7 @@ public class GlowingLeaves extends BlockLeavesBase implements IShearable
 	{
 		super(par1, Material.leaves, false);
 		this.setTickRandomly(true);
-		this.setHardness(0.1F);
-		this.setStepSound(soundSnowFootstep);
+		this.setHardness(0.2F);
 		this.setCreativeTab(BaseClass.BITab);
 	}
 	public void registerIcons(IconRegister par1IconRegister)

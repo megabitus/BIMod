@@ -16,6 +16,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import bi.bi_BasePackage.BaseClass;
+import bi.bi_Entitys.TileEntityCrafter;
 import bi.bi_Helper.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -34,8 +35,7 @@ public class Crafter extends BlockContainer
 	private Icon field_94392_b;	
 	public Crafter(int blockId)
 	{
-		super(blockId, Material.rock);
-
+		super(blockId, Material.wood);
 		setUnlocalizedName("blockMultiFurnaceCore");
 		setStepSound(Block.soundStoneFootstep);
 		setHardness(3.5f);

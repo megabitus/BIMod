@@ -13,7 +13,7 @@ public class GlowNuggetBlock extends Block
 
 	public GlowNuggetBlock(int par1, int par2) 
 	{
-		super(par1, Material.wood);
+		super(par1, Material.rock);
 		this.setCreativeTab(BaseClass.BITab);
 		this.setHardness(2F);
 	}

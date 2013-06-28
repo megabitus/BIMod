@@ -1,9 +1,9 @@
 package bi.bi_Items;
 
-import bi.bi_BasePackage.BaseClass;
-import bi.bi_Helper.Reference;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
+import bi.bi_BasePackage.BaseClass;
+import bi.bi_Helper.Reference;
 
 public class ItemNugget extends Item 
 {
@@ -18,6 +18,5 @@ public class ItemNugget extends Item
     {
         this.itemIcon = par1IconRegister.registerIcon(Reference.MOD_NAME + ":" + this.getUnlocalizedName());
     }
-
 
 }

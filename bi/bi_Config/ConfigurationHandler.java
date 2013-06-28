@@ -39,13 +39,14 @@ public class ConfigurationHandler {
 			BiIds.NuggetOreID = configuration.getBlock(Strings.GLOWING_ORE, BiIds.NuggetOreID).getInt(BiIds.NuggetOreID);
 			BiIds.PoCID = configuration.getBlock(Strings.P_O_C, BiIds.PoCID).getInt(BiIds.PoCID);
 			BiIds.MultiPartID = configuration.getBlock(Strings.MULTI_PART, BiIds.MultiPartID).getInt(BiIds.MultiPartID);
+			BiIds.GlowingSpeederID = configuration.getBlock(Strings.GLOWING_SPEEDER, BiIds.GlowingSpeederID).getInt(BiIds.GlowingSpeederID);
+			BiIds.InGlassID = configuration.getBlock(Strings.IN_GLASS, BiIds.InGlassID).getInt(BiIds.InGlassID);
 			/* Item configs */
 			BiIds.GlowstoneNuggetID = configuration.getItem(Strings.GLOWSTONE_NUGGET, BiIds.GlowstoneNuggetID).getInt(BiIds.GlowstoneNuggetID);
 			BiIds.NuggetSwordID = configuration.getItem(Strings.NUGGET_SWORD, BiIds.NuggetSwordID).getInt(BiIds.NuggetSwordID);
 			BiIds.NuggetPickaxeID = configuration.getItem(Strings.NUGGET_PICKAXE, BiIds.NuggetPickaxeID).getInt(BiIds.NuggetPickaxeID);
 			BiIds.NuggetShovelID = configuration.getItem(Strings.NUGGET_SHOVEL, BiIds.NuggetShovelID).getInt(BiIds.NuggetShovelID);
 			BiIds.NuggetAxeID = configuration.getItem(Strings.NUGGET_AXE, BiIds.NuggetAxeID).getInt(BiIds.NuggetAxeID);
-			BiIds.NuggetHoeID = configuration.getItem(Strings.NUGGET_HOE, BiIds.NuggetHoeID).getInt(BiIds.NuggetHoeID);
 			BiIds.InfusedCoalID = configuration.getItem(Strings.INFUSED_COAL, BiIds.InfusedCoalID).getInt(BiIds.InfusedCoalID);
 			BiIds.FlourID = configuration.getItem(Strings.FLOUR, BiIds.FlourID).getInt(BiIds.FlourID);
 			BiIds.BeaconLaserID = configuration.getItem(Strings.BEACON_LASER, BiIds.BeaconLaserID).getInt(BiIds.BeaconLaserID);
@@ -57,6 +58,12 @@ public class ConfigurationHandler {
 			BiIds.GlowNuggetBlockID = configuration.getItem(Strings.GLOW_NUGGET_BLOCK, BiIds.GlowNuggetBlockID).getInt(BiIds.GlowNuggetBlockID);
 			BiIds.NuggetRawDustID = configuration.getItem(Strings.NUGGET_RAW_DUST, BiIds.NuggetRawDustID).getInt(BiIds.NuggetRawDustID);
 			BiIds.NuggetDustID = configuration.getItem(Strings.NUGGET_DUST, BiIds.NuggetDustID).getInt(BiIds.NuggetDustID);
+			BiIds.CrazyIngotID = configuration.getItem(Strings.CRAZY_INGOT, BiIds.CrazyIngotID).getInt(BiIds.CrazyIngotID);
+			BiIds.CrazyBarID = configuration.getItem(Strings.CRAZY_BAR, BiIds.CrazyBarID).getInt(BiIds.CrazyBarID);
+			BiIds.CrazySwordID = configuration.getItem(Strings.CRAZY_SWORD, BiIds.CrazySwordID).getInt(BiIds.CrazySwordID);
+			BiIds.CrazyPickaxeID = configuration.getItem(Strings.CRAZY_PICKAXE, BiIds.CrazyPickaxeID).getInt(BiIds.CrazyPickaxeID);
+			BiIds.CrazyShovelID = configuration.getItem(Strings.CRAZY_SHOVEL, BiIds.CrazyShovelID).getInt(BiIds.CrazyShovelID);
+			BiIds.CrazyAxeID = configuration.getItem(Strings.CRAZY_AXE, BiIds.CrazyAxeID).getInt(BiIds.CrazyAxeID);
 
 
 		}

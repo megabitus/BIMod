@@ -6,8 +6,9 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 import bi.bi_BasePackage.BaseClass;
+import bi.bi_Entitys.TileEntityCrafter;
+import bi.bi_Entitys.TileEntityMultiPart;
 import bi.bi_Helper.Reference;
-import bi.bi_Helper.TileEntityMultiPart;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
@@ -30,7 +31,7 @@ public class MultiPart extends BlockContainer
 	{
 		super(blockId, Material.wood);
 		setStepSound(Block.soundStoneFootstep);
-		setHardness(3.5f);
+		setHardness(2.5F);
 	}
 	public Icon getIcon(int par1, int par2) {
 		return par1 == 0 ? this.field_94392_b : (par1 == 1 ? this.field_94393_a : this.blockIcon);

@@ -1,5 +1,6 @@
 package bi.bi_Helper;
 
+import bi.bi_Entitys.EntityLaserMunition;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.Tessellator;

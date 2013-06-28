@@ -1,5 +1,6 @@
 package bi.bi_Helper;
 
+import bi.bi_Entitys.TileEntityGlowNuggetChest;
 import net.minecraft.client.model.ModelChest;
 import net.minecraft.client.renderer.tileentity.TileEntityRenderer;
 import net.minecraft.item.ItemStack;

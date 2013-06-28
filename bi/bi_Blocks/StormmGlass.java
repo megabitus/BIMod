@@ -16,11 +16,11 @@ public class StormmGlass extends Block
 {
 	public static boolean fallInstantly = false;
 	public StormmGlass(int par1, Material par2Material, boolean b) {
-		super(par1, Material.sand);
+		super(par1, Material.glass);
 		this.setCreativeTab(BaseClass.BITab);
 	}
 	public StormmGlass(int stormmGlassID, int i) {
-		super(i, Material.sand);
+		super(i, Material.glass);
 		this.setCreativeTab(BaseClass.BITab);
 	}
 	public void randomDisplayTick(World par1World, int par2, int par3, int par4, Random par5Random)

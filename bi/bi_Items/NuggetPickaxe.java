@@ -14,9 +14,9 @@ public class NuggetPickaxe extends ItemPickaxe
 		this.setCreativeTab(BaseClass.BITab);
 	}
 	public void updateIcons(IconRegister par1IconRegister)
-    {
-        this.itemIcon = par1IconRegister.registerIcon(Reference.MOD_NAME + ":" + this.getUnlocalizedName());
-    }
+	{
+		this.itemIcon = par1IconRegister.registerIcon(Reference.MOD_NAME + ":" + this.getUnlocalizedName());
+	}
 
 
 }

@@ -1,7 +1,7 @@
 package bi.bi_gui;
 
 import bi.bi_Blocks.ModBlocks;
-import bi.bi_Blocks.TileEntityCrafter;
+import bi.bi_Entitys.TileEntityCrafter;
 import bi.bi_Registers.CCraftingManager;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;

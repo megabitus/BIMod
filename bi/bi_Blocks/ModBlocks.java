@@ -10,7 +10,6 @@ import net.minecraft.block.BlockFence;
 import net.minecraft.block.material.Material;
 
 public class ModBlocks{
-	
 	public static Block StarSky;
 	public static Block StormmStone;
 	public static Block ReinforcedStone;
@@ -30,16 +29,18 @@ public class ModBlocks{
 	public static Block NuggetOre;
 	public static Block MultiPart;
 	public static Block PoC;
-
+	public static Block GlowingSpeeder;
+	public static Block InGlass;
 	public static void init() {
+		
 		StarSky = new StarSky(BiIds.StarSkyID, 1).setUnlocalizedName("StarSky");
-		StormmStone = new BlockStormm(BiIds.StormmStoneID, 2).setUnlocalizedName("StormmStone");
+		StormmStone = new StormmStone(BiIds.StormmStoneID, 2).setUnlocalizedName("StormmStone");
 		ReinforcedStone = new ReinforcedStone(BiIds.ReinforcedStoneID, 3).setResistance(20000.0F).setUnlocalizedName("ReinforcedStone");
 		StormmSand = new StormmSand(BiIds.StormmSandID, 4).setUnlocalizedName("StormmSand").setResistance(2.0F).setLightValue(0.0F).setStepSound(Block.soundGravelFootstep);
-		StormmGlass = new StormmGlass(BiIds.StormmGlassID, 3894).setUnlocalizedName("StormmGlass");
+		StormmGlass = new StormmGlass(BiIds.StormmGlassID, BiIds.StormmGlassID).setUnlocalizedName("StormmGlass");
 		LittleGlowstone = new LittleGlowstone(BiIds.LittleGlowstoneID, 6).setUnlocalizedName("LittleGlowstone").setLightValue(1F);
 		Crafter = new Crafter(BiIds.CrafterID).setUnlocalizedName("Crafter").setResistance(2.0F).setStepSound(Block.soundWoodFootstep);
-		Fence = new BlockFence (BiIds.FenceID, "GlowNugget Fence", Material.wood).setUnlocalizedName("GlowNuggetFence").setCreativeTab(BaseClass.BITab).setLightValue(1F);
+		Fence = new BlockFence (BiIds.FenceID, "GlowNugget Fence", Material.wood).setUnlocalizedName("GlowNuggetFence").setCreativeTab(BaseClass.BITab).setLightValue(1F).setHardness(5F);
 		FenceGate = new FenceGate(BiIds.FenceGateID).setUnlocalizedName("FenceGate").setResistance(2.0F).setStepSound(Block.soundWoodFootstep).setLightValue(1F);
 		GlowNuggetBlock = new GlowNuggetBlock(BiIds.GlowNuggetBlockID, 0).setUnlocalizedName("GlowNuggetBlock").setLightValue(1F);
 		Stair = new Stair(BiIds.StairID, ModBlocks.GlowNuggetBlock, 8).setHardness(1.5F).setResistance(3.5F).setUnlocalizedName("GlowNugget Stair").setLightValue(1F);
@@ -48,9 +49,11 @@ public class ModBlocks{
 		GlowingSapling = new GlowingSapling(BiIds.GlowingSaplingID, 1).setUnlocalizedName("GlowingSapling").setLightValue(1F);
 		GlowingLeaves = new GlowingLeaves(BiIds.GlowingLeavesID).setUnlocalizedName("GlowingLeaves").setLightValue(1F);
 		GlowingPlank = new GlowingPlank(BiIds.GlowingPlankID, 1).setUnlocalizedName("GlowingPlank").setLightValue(1F);
-		NuggetOre = new NuggetOre(BiIds.NuggetOreID, 1).setUnlocalizedName("NuggetOre").setLightValue(1F);
-		MultiPart = new MultiPart(BiIds.MultiPartID).setUnlocalizedName("MultiPart").setLightValue(1F);
-		PoC = new PoC(BiIds.PoCID, 9).setUnlocalizedName("PoC").setLightValue(1F);
-	}
+		NuggetOre = new NuggetOre(BiIds.NuggetOreID, 1).setUnlocalizedName("NuggetOre");
+		MultiPart = new MultiPart(BiIds.MultiPartID).setUnlocalizedName("MultiPart");
+		PoC = new PoC(BiIds.PoCID, 9).setUnlocalizedName("PoC");
+		GlowingSpeeder = new GlowingSpeeder(BiIds.GlowingSpeederID, 9).setUnlocalizedName("GlowingSpeeder");
+		InGlass = new InGlass(BiIds.InGlassID, BiIds.InGlassID).setUnlocalizedName("InvisibleGlass").setStepSound(Block.soundGlassFootstep);
 
+	}
 }

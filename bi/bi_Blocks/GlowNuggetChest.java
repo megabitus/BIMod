@@ -1,7 +1,7 @@
 package bi.bi_Blocks;
 
 import bi.bi_BasePackage.BaseClass;
-import bi.bi_Helper.TileEntityGlowNuggetChest;
+import bi.bi_Entitys.TileEntityGlowNuggetChest;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import java.util.Iterator;
