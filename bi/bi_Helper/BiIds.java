@@ -41,6 +41,14 @@ public class BiIds {
 	public static int NuggetDustID = 3974;
 	public static int MultiPartID = 3975;
 	public static int PoCID = 3976;
+	public static int CrazyIngotID = 3977;
+	public static int GlowingSpeederID = 3978;
+	public static int CrazyBarID = 3979;
+	public static int CrazySwordID = 3980;
+	public static int CrazyPickaxeID = 3981;
+	public static int CrazyShovelID = 3982;
+	public static int CrazyAxeID = 3983;
+	public static int InGlassID = 3984;
 	
 
 }

@@ -1,25 +1,21 @@
 package bi.bi_BasePackage;
 
 import java.io.File;
-import java.util.Random;
 
+import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityEggInfo;
+import net.minecraft.entity.EntityList;
 import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
-import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraft.world.biome.BiomeGenDesert;
-import net.minecraft.world.biome.BiomeGenForest;
-import net.minecraft.world.biome.BiomeGenHills;
-import net.minecraft.world.biome.BiomeGenPlains;
-import net.minecraft.world.biome.BiomeGenSwamp;
-import net.minecraft.world.biome.BiomeGenTaiga;
-import net.minecraft.world.gen.feature.WorldGenMinable;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.oredict.OreDictionary;
 import bi.bi_Blocks.ModBlocks;
 import bi.bi_Config.ConfigurationHandler;
-import bi.bi_Helper.EntityLaserMunition;
+import bi.bi_Entitys.EntityLaserMunition;
+import bi.bi_Entitys.EntityOana;
+import bi.bi_Helper.BiIds;
 import bi.bi_Helper.Reference;
-import bi.bi_Helper.WorldGenGlowTree;
 import bi.bi_Items.ModItems;
 import bi.bi_Registers.Recipes;
 import bi.bi_Registers.Registry;
@@ -37,7 +33,6 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
-import cpw.mods.fml.common.registry.GameRegistry;
 
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME2, version = Reference.VERSION_NUMBER)
@@ -69,6 +64,12 @@ public class BaseClass
 		NetworkRegistry.instance().registerGuiHandler(this, guiHandler);
 		EntityRegistry.registerModEntity(EntityLaserMunition.class, "LaserMunition", 0, this, 128, 1, true);
 		proxy.registerRenderers();
+		EntityRegistry.registerModEntity(EntityOana.class, "Oana", 1, this, 80, 3, true);
+		EntityEgg(EntityOana.class, 0xE01B1B, 0x2FE01B);
+		OreDictionary.registerOre("logWood", ModBlocks.GlowingLog);
+		OreDictionary.registerOre("plankWood", ModBlocks.GlowingPlank);
+		OreDictionary.registerOre("treeSapling", ModBlocks.GlowingSapling);
+		OreDictionary.registerOre("treeLeaves", ModBlocks.GlowingLeaves);
 	}
 	@PostInit
 	public static void postInit(FMLPostInitializationEvent event)
@@ -80,6 +81,19 @@ public class BaseClass
 	private void oreRegistration() 
 	{
 		OreDictionary.registerOre("StormmSand", new ItemStack(ModBlocks.StormmSand));
+	}
+	public static int getUniqueID(){
+		int EntityId = 300;
+		do{
+			EntityId++;
+		} while(EntityList.getStringFromID(EntityId) != null);
+		return EntityId;
+	}
+	
+	public static void EntityEgg(Class<? extends Entity > entity, int primaryColor, int secondaryColor){
+		int id = getUniqueID();
+		EntityList.IDtoClassMapping.put(id, entity);
+		EntityList.entityEggs.put(id, new EntityEggInfo(id, primaryColor, secondaryColor));
 	}
 }
 
