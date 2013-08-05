@@ -17,6 +17,7 @@ import net.minecraft.world.gen.feature.WorldGenTaiga2;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.event.terraingen.TerrainGen;
 import bi.bi_BasePackage.BaseClass;
+import bi.bi_Config.Strings;
 import bi.bi_Helper.Reference;
 import bi.bi_Helper.WorldGenGlowTree;
 import cpw.mods.fml.relauncher.Side;
@@ -32,10 +33,18 @@ public class GlowingSapling extends BlockFlower
 		float f = 0.4F;
 		this.setStepSound(soundGravelFootstep);
 		this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, f * 2.0F, 0.5F + f);
+		this.setUnlocalizedName(Strings.GLOWING_SAPLING);
+		this.setLightValue(1F);
 	}
+	@Override
+	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister par1IconRegister)
-	{
-		this.blockIcon = par1IconRegister.registerIcon(Reference.MOD_NAME + ":" + this.getUnlocalizedName2());
+    {
+        this.blockIcon = par1IconRegister.registerIcon(Strings.GLOWING_SAPLING);
+    }
+	@SideOnly(Side.CLIENT)
+	public Icon getIcon(int side, int meta) {
+		return this.blockIcon;
 	}
 	public void updateTick(World par1World, int par2, int par3, int par4, Random par5Random)
 	{

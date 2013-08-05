@@ -27,46 +27,11 @@ public class CCraftingManager
 	}
 	private CCraftingManager()
 	{
-
-		//Other
-		this.addRecipe(new ItemStack(ModBlocks.Crafter, 1), new Object []{"LCL", "IWI", "LIL", Character.valueOf('L'), Block.planks, Character.valueOf('I'), ModItems.GlowstoneNugget, Character.valueOf('W'), Block.wood, Character.valueOf('C'), Block.workbench});
-		this.addShapelessRecipe(new ItemStack(Block.obsidian, 1), new ItemStack(Item.bucketWater), new ItemStack(Item.bucketLava));
-		this.addRecipe(new ItemStack(ModItems.InfusedCoal, 1), new Object []{"NNN", "NCN", "NNN", Character.valueOf('N'), Block.netherrack, Character.valueOf('C'), Item.coal});
-		this.addRecipe(new ItemStack(ModItems.GlowstoneNugget, 1), new Object[] {"GRG", "RIR", "GRG", Character.valueOf('I'), Item.goldNugget, Character.valueOf('R'), Item.lightStoneDust, Character.valueOf('G'), Item.ghastTear});
-		this.addRecipe(new ItemStack(ModItems.NuggetSword, 1), new Object []{"XGX", "XGX", "XSX", Character.valueOf('G'), ModItems.GlowstoneNugget, Character.valueOf('S'), Item.stick});
-		this.addRecipe(new ItemStack(ModItems.NuggetPickaxe, 1), new Object []{"GGG", "XSX", "XSX", Character.valueOf('G'), ModItems.GlowstoneNugget, Character.valueOf('S'), Item.stick});
-		this.addRecipe(new ItemStack(ModItems.NuggetShovel, 1), new Object []{"XGX", "XSX", "XSX", Character.valueOf('G'), ModItems.GlowstoneNugget, Character.valueOf('S'), Item.stick});
-		this.addRecipe(new ItemStack(ModItems.NuggetAxe, 1), new Object []{"GGX", "GSX", "XSX", Character.valueOf('G'), ModItems.GlowstoneNugget, Character.valueOf('S'), Item.stick});
-		this.addRecipe(new ItemStack(ModItems.Turky, 3), new Object []{"WWW", "SCW", "WSW", Character.valueOf('W'), Item.wheat, Character.valueOf('C'), Item.chickenCooked, Character.valueOf('S'), Item.beefCooked});
-		this.addRecipe(new ItemStack(ModItems.Turky, 3), new Object []{"WWW", "PCW", "WPW", Character.valueOf('W'), Item.wheat, Character.valueOf('C'), Item.chickenCooked, Character.valueOf('P'), Item.porkCooked});
-		this.addRecipe(new ItemStack(ModItems.BeaconLaser, 1), new Object []{"BOO", "ONO", "RLU", Character.valueOf('B'), Block.beacon, Character.valueOf('O'), Block.obsidian, Character.valueOf('N'), Item.netherStar, Character.valueOf('R'), Item.redstone, Character.valueOf('L'), Item.leather, Character.valueOf('U'), Block.stoneButton});
-//		this.addRecipe(new ItemStack(ModItems.NuggetHelmet, 1), new Object []{"NNN", "NCN", "CCC", Character.valueOf('N'), ModItems.GlowstoneNugget});
-//		this.addRecipe(new ItemStack(ModItems.NuggetChestPlate, 1), new Object []{"NCN", "NNN", "NNN", Character.valueOf('N'), ModItems.GlowstoneNugget});
-//		this.addRecipe(new ItemStack(ModItems.NuggetLeggings, 1), new Object []{"NNN", "NCN", "NCN", Character.valueOf('N'), ModItems.GlowstoneNugget});
-//		this.addRecipe(new ItemStack(ModItems.NuggetBoots, 1), new Object []{"CCC", "NCN", "NCN", Character.valueOf('N'), ModItems.GlowstoneNugget});
-		this.addRecipe(new ItemStack(ModBlocks.StarSky, 2), new Object []{"XRX", "XOX", "XRX", Character.valueOf('R'), ModItems.GlowstoneNugget, Character.valueOf('O'), Block.obsidian});
-		this.addRecipe(new ItemStack(ModBlocks.StormmStone, 4), new Object []{"XMX", "XSX", "XIX", Character.valueOf('M'), Block.mushroomBrown, Character.valueOf('S'), Block.stone, Character.valueOf('I'), Item.ingotIron});
-		this.addRecipe(new ItemStack(ModBlocks.StormmSand, 4),new Object[]{"XMX", "XSX", "XIX",Character.valueOf('M'), Block.mushroomBrown, Character.valueOf('S'), Block.slowSand, Character.valueOf('I'), Item.ingotIron, Character.valueOf('X'), Block.sand});
-		this.addShapelessRecipe(new ItemStack(Item.netherStalkSeeds, 1), new ItemStack(Item.seeds), new ItemStack(Block.slowSand), new ItemStack(Item.redstone));
-		this.addRecipe(new ItemStack(Item.lightStoneDust, 1), new Object []{"LLL", "LLL", "LLL", Character.valueOf('L'), ModBlocks.LittleGlowstone});
-		this.addRecipe(new ItemStack(ModBlocks.LittleGlowstone, 2), new Object []{"TTT", "TTT", "TTT", Character.valueOf('T'), Block.torchWood});
-		this.addRecipe(new ItemStack(ModBlocks.ReinforcedStone, 32), new Object []{"SSS", "SDS", "SSS", Character.valueOf('S'), Block.stone, Character.valueOf('D'), Item.diamond});
-		this.addRecipe(new ItemStack(Block.ice, 4),new Object[]{"SSS", "SBS", "SSS",Character.valueOf('S'), Item.snowball, Character.valueOf('B'), Item.bucketWater});
-		this.addRecipe(new ItemStack(ModItems.LaserMunition, 16), new Object[] {"GND", "NAN", "DNS", Character.valueOf('G'), ModItems.GlowstoneNugget, Character.valueOf('A'), Item.arrow, Character.valueOf('S'), Item.stick});
-		this.addRecipe(new ItemStack(ModBlocks.GlowNuggetBlock, 1), new Object []{"GGG", "GGG", "GGG", Character.valueOf('G'), ModItems.GlowstoneNugget});
-		this.addShapelessRecipe(new ItemStack(ModItems.GlowstoneNugget, 9), new ItemStack(ModBlocks.GlowNuggetBlock));
-		this.addShapelessRecipe(new ItemStack(ModBlocks.GlowingPlank, 4), new ItemStack(ModBlocks.GlowingLog));
-		this.addRecipe(new ItemStack(ModBlocks.GlowNuggetChest, 1), new Object []{"PPP", "POP", "PPP", Character.valueOf('P'), ModBlocks.GlowingPlank});
-		this.addRecipe(new ItemStack(ModBlocks.Crafter, 1), new Object []{"PPP", "PGP", "PPP", Character.valueOf('P'), ModBlocks.GlowingPlank,  Character.valueOf('G'), ModItems.GlowstoneNugget});
-		this.addRecipe(new ItemStack(ModBlocks.Fence, 2), new Object []{"OOO", "PPP", "PPP", Character.valueOf('P'), ModBlocks.GlowingPlank});
-		this.addShapelessRecipe(new ItemStack(ModBlocks.GlowingLog, 4), new ItemStack(Block.wood,OreDictionary.WILDCARD_VALUE), new ItemStack(ModItems.GlowstoneNugget));
-		this.addRecipe(new ItemStack(ModItems.GlowstoneNugget, 1), new Object []{"NNN", "NNN", "NNN", Character.valueOf('N'), ModItems.NuggetDust});
-		this.addRecipe(new ItemStack(ModBlocks.Stair, 4), new Object []{"NOO", "NNO", "NNN", Character.valueOf('N'), ModBlocks.GlowingPlank});
-		this.addShapelessRecipe(new ItemStack(Item.blazeRod, 2), new ItemStack(Item.blazePowder), new ItemStack(Item.stick));
-	    this.addShapelessRecipe(new ItemStack(ModBlocks.PoC, 3), new ItemStack(ModBlocks.GlowingLog),new ItemStack(Item.dyePowder,1,2));
-
-
-
+		this.addRecipe(new ItemStack(ModItems.CrazyBar, 1), new Object []{"LLB", "LBL", "BLL", Character.valueOf('B'), ModItems.CrazyIngot});
+		this.addRecipe(new ItemStack(ModItems.CrazySword, 1), new Object []{"XGX", "XGX", "XSX", Character.valueOf('G'), ModItems.CrazyIngot, Character.valueOf('S'), ModItems.CrazyBar});
+		this.addRecipe(new ItemStack(ModItems.CrazyPickaxe, 1), new Object []{"GGG", "XSX", "XSX", Character.valueOf('G'), ModItems.CrazyIngot, Character.valueOf('S'), ModItems.CrazyBar});
+		this.addRecipe(new ItemStack(ModItems.CrazyShovel, 1), new Object []{"XGX", "XSX", "XSX", Character.valueOf('G'), ModItems.CrazyIngot, Character.valueOf('S'), ModItems.CrazyBar});
+		this.addRecipe(new ItemStack(ModItems.CrazyAxe, 1), new Object []{"GGX", "GSX", "XSX", Character.valueOf('G'), ModItems.CrazyIngot, Character.valueOf('S'), ModItems.CrazyBar});
 		System.out.println(this.recipes.size() + " recipes");
 
 	}

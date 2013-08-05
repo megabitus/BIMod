@@ -1,8 +1,10 @@
 package bi.bi_Entitys;
 
 
+import cpw.mods.fml.client.FMLClientHandler;
 import bi.bi_Items.ModItems;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingData;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAIBreakDoor;
@@ -24,17 +26,14 @@ public class EntityOana extends EntityMob
 	public EntityOana(World par1World) 
 	{
 		super(par1World);
-		this.texture = "/mods/B&I Mod/textures/Mob/Oana.png";
-		this.moveSpeed = 0.50F;
 		this.tasks.addTask(0, new EntityAISwimming(this));
 		this.tasks.addTask(1, new EntityAIBreakDoor(this));
-		this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, this.moveSpeed, false));
+		this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, 0.50F, false));
 		this.tasks.addTask(3, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
-		this.tasks.addTask(4, new EntityAIWander(this, this.moveSpeed));
+		this.tasks.addTask(4, new EntityAIWander(this, 0.50F));
 		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
-		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 16.0F, 0, true));
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true));
 	}
-
 	public int getAttackStrength(Entity par1Entity) { return 4; }
 
 	protected boolean isAIEnabled()
@@ -51,15 +50,9 @@ public class EntityOana extends EntityMob
 	{
 		return EnumCreatureAttribute.UNDEFINED;
 	}
-
-	public String getTexture()
-	{
-		return "/mods/B&I Mod/textures/Mob/Oana.png";
-	}
-
 	public int getTotalArmorValue()
 	{
-		return 2;
+		return 3;
 	}
 
 	public void onLivingUpdate()
@@ -121,9 +114,4 @@ public class EntityOana extends EntityMob
 			this.dropItem(ModItems.CrazyIngot.itemID, 1);
 		}
 	}
-	 public boolean interact(EntityPlayer entityplayer)
-     {
-             ModLoader.getMinecraftInstance().thePlayer.addChatMessage("I'm a CRAZY GIRL!!!!!");
-             return true;
-     }
 }

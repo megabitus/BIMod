@@ -1,4 +1,4 @@
-package bi.bi_gui;
+package bi.bi_Gui;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;

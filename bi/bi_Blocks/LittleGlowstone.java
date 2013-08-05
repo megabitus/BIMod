@@ -1,5 +1,7 @@
 package bi.bi_Blocks;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -10,6 +12,7 @@ import net.minecraft.util.Vec3;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import bi.bi_BasePackage.BaseClass;
+import bi.bi_Config.Strings;
 import bi.bi_Helper.LittleGlowstoneHandler;
 import bi.bi_Helper.Reference;
 
@@ -20,11 +23,19 @@ public class LittleGlowstone extends Block
 		super(par1, Material.coral);
 		this.setCreativeTab(BaseClass.BITab);
 		this.setHardness(1F);
-		setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.125F, 1.0F);
+		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.125F, 1.0F);
+		this.setUnlocalizedName(Strings.LITTLE_GLOWSTONE);
+		this.setLightValue(1F);
 	}
+	@Override
+	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister par1IconRegister)
-	{
-		this.blockIcon = par1IconRegister.registerIcon(Reference.MOD_NAME + ":" + this.getUnlocalizedName2());
+    {
+        this.blockIcon = par1IconRegister.registerIcon(Strings.LITTLE_GLOWSTONE);
+    }
+	@SideOnly(Side.CLIENT)
+	public Icon getIcon(int side, int meta) {
+		return this.blockIcon;
 	}
 	public static final boolean isRailBlockAt(World par0World, int par1, int par2, int par3)
 	{

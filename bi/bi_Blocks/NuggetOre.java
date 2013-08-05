@@ -2,7 +2,10 @@ package bi.bi_Blocks;
 
 import java.util.Random;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import bi.bi_BasePackage.BaseClass;
+import bi.bi_Config.Strings;
 import bi.bi_Helper.Reference;
 import bi.bi_Items.ModItems;
 import net.minecraft.block.Block;
@@ -10,6 +13,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
+import net.minecraft.util.Icon;
 import net.minecraft.world.World;
 
 public class NuggetOre extends Block 
@@ -20,11 +24,19 @@ public class NuggetOre extends Block
 		super(par1, Material.iron);
 		this.setCreativeTab(BaseClass.BITab);
 		this.setHardness(3F);
+		this.setUnlocalizedName(Strings.NUGGET_ORE);
+		this.setLightValue(1F);
 	}
+	@Override
+	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister par1IconRegister)
     {
-        this.blockIcon = par1IconRegister.registerIcon(Reference.MOD_NAME + ":" + this.getUnlocalizedName2());
+        this.blockIcon = par1IconRegister.registerIcon(Strings.NUGGET_ORE);
     }
+	@SideOnly(Side.CLIENT)
+	public Icon getIcon(int side, int meta) {
+		return this.blockIcon;
+	}
 	public int idDropped(int par1, Random par2Random, int par3)
     {
         return ModItems.NuggetRawDust.itemID;

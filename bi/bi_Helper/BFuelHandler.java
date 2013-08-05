@@ -1,6 +1,5 @@
 package bi.bi_Helper;
 
-import bi.bi_BasePackage.BaseClass;
 import bi.bi_Items.ModItems;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

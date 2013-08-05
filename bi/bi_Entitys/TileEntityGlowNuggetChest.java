@@ -509,4 +509,10 @@ public class TileEntityGlowNuggetChest extends TileEntity implements IInventory
 
         return this.field_94046_i;
     }
+
+	@Override
+	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

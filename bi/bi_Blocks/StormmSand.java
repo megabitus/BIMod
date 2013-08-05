@@ -2,7 +2,10 @@ package bi.bi_Blocks;
 
 import java.util.Random;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import bi.bi_BasePackage.BaseClass;
+import bi.bi_Config.Strings;
 import bi.bi_Helper.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -23,6 +26,10 @@ public class StormmSand extends Block
 		super(par1, Material.sand);
 		this.setCreativeTab(BaseClass.BITab);
 		this.setHardness(1F);
+		this.setUnlocalizedName(Strings.STORMM_SAND);
+		this.setResistance(2.0F);
+		this.setLightValue(0.0F);
+		this.setStepSound(Block.soundGravelFootstep);
 	}
 
 	public void randomDisplayTick(World par1World, int par2, int par3, int par4, Random par5Random)
@@ -44,9 +51,11 @@ public class StormmSand extends Block
 		par5Entity.motionX *= 0.0D;
 		par5Entity.motionZ *= 0.0D;
 	}
+	@Override
+	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister par1IconRegister)
     {
-        this.blockIcon = par1IconRegister.registerIcon(Reference.MOD_NAME + ":" + this.getUnlocalizedName2());
+        this.blockIcon = par1IconRegister.registerIcon(Strings.STORMM_SAND);
     }
 
 	int a1 = 0,a2 = 0,a3 = 0,a4 = 0,a5 = 0,a6 = 0;
@@ -65,7 +74,7 @@ public class StormmSand extends Block
 	}
 	public int tickRate()
 	{
-		return 10;
+		return 2;
 	}
 
 	/**

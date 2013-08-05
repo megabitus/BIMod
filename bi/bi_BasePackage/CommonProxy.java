@@ -1,8 +1,7 @@
 package bi.bi_BasePackage;
 
 import bi.bi_Entitys.TileEntityCrafter;
-import bi.bi_Entitys.TileEntityMultiPart;
-import bi.bi_gui.ContainerC;
+import bi.bi_Gui.ContainerC;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
@@ -15,12 +14,8 @@ public class CommonProxy
 	public void registerTileEntities()
 	{
 		GameRegistry.registerTileEntity(TileEntityCrafter.class, "tileEntityCrafter");
-		GameRegistry.registerTileEntity(TileEntityMultiPart.class, "tileEntityMultiPart");
 		TileEntity.addMapping(TileEntityCrafter.class, "tileEntityCrafter");
-		TileEntity.addMapping(TileEntityMultiPart.class, "tileEntityMultiPart");
 	}
-        
-   
 	public Object getServerGuiElement(int guiID, EntityPlayer player, World world, int x, int y, int z)
 	{
 		TileEntityCrafter tileEntity = (TileEntityCrafter)world.getBlockTileEntity(x, y, z);
@@ -29,12 +24,7 @@ public class CommonProxy
 		
 		return null;
 	}
-	public Object getClientGuiElement(int guiID, EntityPlayer player, World world, int x, int y, int z)
-	{
-		return null;
+	public void initSounds() {
 	}
-	public int addArmor(String armorName){
-		return 0;
-		}
 
 }

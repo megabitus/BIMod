@@ -1,4 +1,4 @@
-package bi.bi_gui;
+package bi.bi_Gui;
 
 import bi.bi_Blocks.ModBlocks;
 import bi.bi_Entitys.TileEntityCrafter;
@@ -92,9 +92,9 @@ public class ContainerC extends Container
 		this.craftResult.setInventorySlotContents(0, bi.bi_Registers.CCraftingManager.getInstance().findMatchingRecipe(this.craftMatrix, this.worldObj));
 	}
 
-	public void onCraftGuiClosed(EntityPlayer par1EntityPlayer)
+	public void onContainerClosed(EntityPlayer par1EntityPlayer)
 	{
-		super.onCraftGuiClosed(par1EntityPlayer);
+		super.onContainerClosed(par1EntityPlayer);
 
 		if (!this.worldObj.isRemote)
 		{

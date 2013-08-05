@@ -8,15 +8,18 @@ import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.util.MathHelper;
+import net.minecraft.util.ResourceLocation;
+
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
 @SideOnly(Side.CLIENT)
 public class RenderLaserMunition extends Render
 {
+	private static final ResourceLocation field_110837_a = new ResourceLocation("textures/entity/B&I/LaserMunition.png");
+    private int field_77068_a;
     public void renderArrow(EntityLaserMunition par1EntityArrow, double par2, double par4, double par6, float par8, float par9)
     {
-        this.loadTexture("/mods/B&I Mod/textures/items/LaseMunition.png");
         GL11.glPushMatrix();
         GL11.glTranslatef((float)par2, (float)par4, (float)par6);
         GL11.glRotatef(par1EntityArrow.prevRotationYaw + (par1EntityArrow.rotationYaw - par1EntityArrow.prevRotationYaw) * par9 - 90.0F, 0.0F, 1.0F, 0.0F);
@@ -34,7 +37,6 @@ public class RenderLaserMunition extends Render
         float f10 = 0.05625F;
         GL11.glEnable(GL12.GL_RESCALE_NORMAL);
         float f11 = (float)par1EntityArrow.arrowShake - par9;
-
         if (f11 > 0.0F)
         {
             float f12 = -MathHelper.sin(f11 * 3.0F) * f11;
@@ -75,7 +77,7 @@ public class RenderLaserMunition extends Render
         GL11.glPopMatrix();
     }
 
-    /**
+	/**
      * Actually renders the given argument. This is a synthetic bridge method, always casting down its argument and then
      * handing it off to a worker function which does the actual work. In all probabilty, the class Render is generic
      * (Render<T extends Entity) and this method has signature public void doRender(T entity, double d, double d1,
@@ -85,4 +87,9 @@ public class RenderLaserMunition extends Render
     {
         this.renderArrow((EntityLaserMunition)par1Entity, par2, par4, par6, par8, par9);
     }
+
+	@Override
+	protected ResourceLocation func_110775_a(Entity entity){
+		return field_110837_a;
+	}
 }

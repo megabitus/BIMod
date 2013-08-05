@@ -2,7 +2,6 @@ package bi.bi_Helper;
 
 import java.util.Random;
 
-import bi.bi_BasePackage.BaseClass;
 import bi.bi_Blocks.ModBlocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
