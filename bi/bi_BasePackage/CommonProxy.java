@@ -11,11 +11,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class CommonProxy
 {
 	public void registerRenderers () {}
-	public void registerTileEntities()
-	{
-		GameRegistry.registerTileEntity(TileEntityCrafter.class, "tileEntityCrafter");
-		TileEntity.addMapping(TileEntityCrafter.class, "tileEntityCrafter");
-	}
 	public Object getServerGuiElement(int guiID, EntityPlayer player, World world, int x, int y, int z)
 	{
 		TileEntityCrafter tileEntity = (TileEntityCrafter)world.getBlockTileEntity(x, y, z);

@@ -16,7 +16,6 @@ import bi.bi_Config.BiIds;
 import bi.bi_Config.ConfigurationHandler;
 import bi.bi_Entitys.EntityLaserMunition;
 import bi.bi_Entitys.EntityOana;
-import bi.bi_Gui.GuiHandlerC;
 import bi.bi_Helper.Reference;
 import bi.bi_Items.ModItems;
 import bi.bi_Network.BIPacketHandler;
@@ -45,9 +44,9 @@ channels = {Reference.CHANEL},
 packetHandler = BIPacketHandler.class)
 public class BaseClass
 {
-	@Instance(Reference.MOD_ID)
+	@Instance
 	public static BaseClass instance;
-	private GuiHandlerC guiHandler = new GuiHandlerC();
+	public GuiHandlerC guiHandlerC = new GuiHandlerC();
 	@SidedProxy(clientSide = "bi.bi_BasePackage.ClientProxy", 
 			    serverSide = "bi.bi_BasePackage.CommonProxy")
 	public static CommonProxy proxy;
@@ -58,11 +57,11 @@ public class BaseClass
 		ConfigurationHandler.init(new File(evt.getModConfigurationDirectory().getAbsolutePath() + "\\B&I\\" + "B&I" + ".cfg"));
 		ModItems.init();
 		ModBlocks.init();
+		NetworkRegistry.instance().registerGuiHandler(this, guiHandlerC);
 		Registry.init();
 		Recipes.init();
 		EntityRegistry.registerModEntity(EntityLaserMunition.class, "LaserMunition", 0, this, 128, 1, true);
 		proxy.registerRenderers();
-		NetworkRegistry.instance().registerGuiHandler(this, guiHandler);
 		proxy.initSounds();
 		EntityRegistry.registerModEntity(EntityOana.class, "Oana", 1, this, 80, 3, true);
 		EntityEgg(EntityOana.class, 0xE01B1B, 0x2FE01B);

@@ -6,10 +6,13 @@ import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.ChestGenHooks;
 import net.minecraftforge.common.MinecraftForge;
+import bi.bi_BasePackage.BaseClass;
 import bi.bi_Blocks.ModBlocks;
 import bi.bi_Config.Strings;
 import bi.bi_Entitys.EntityOana;
+import bi.bi_Entitys.EntityLittleGlowstone;
 import bi.bi_Entitys.TileEntityGlowNuggetChest;
+import bi.bi_Entitys.TileEntityLittleGlowstone;
 import bi.bi_Helper.BFuelHandler;
 import bi.bi_Helper.BIWorldGenerator;
 import bi.bi_Helper.BlockHandler;
@@ -84,6 +87,7 @@ public class Registry {
 		LanguageRegistry.addName(ModItems.NetherFuel, "Nether Fuel");
 		LanguageRegistry.addName(ModItems.GlowingStick, "Glowing Stick");
 		LanguageRegistry.addName(ModItems.Banana, "Banana");
+		LanguageRegistry.addName(ModItems.Test, "Test Tool");
 		for(int i = 0; i < Strings.ORANGE_NAMES.length; i++){
 			LanguageRegistry.addName(new ItemStack(ModItems.Orange, 1, i), Strings.ORANGE_NAMES[i]);
 		}
@@ -109,6 +113,7 @@ public class Registry {
 		GameRegistry.registerFuelHandler(new BFuelHandler());
 		RenderingRegistry.instance().registerBlockHandler(new BlockHandler());
 		GameRegistry.registerTileEntity(TileEntityGlowNuggetChest.class, "tileentitychest");
+		GameRegistry.registerTileEntity(TileEntityLittleGlowstone.class, Strings.LITTLE_GLOWSTONE_TE_KEY);
 		EntityRegistry.addSpawn(EntityOana.class, 10, 2, 4, EnumCreatureType.ambient, BiomeGenBase.beach, BiomeGenBase.extremeHills, BiomeGenBase.extremeHillsEdge, BiomeGenBase.forest, BiomeGenBase.forestHills, BiomeGenBase.jungle, BiomeGenBase.jungleHills, BiomeGenBase.mushroomIsland, BiomeGenBase.mushroomIslandShore, BiomeGenBase.ocean, BiomeGenBase.plains, BiomeGenBase.river, BiomeGenBase.swampland);
 		//BlocksHarvestLevel
 		MinecraftForge.setBlockHarvestLevel(ModBlocks.StormmSand, "shovel", 0);

@@ -32,6 +32,7 @@ public class CCraftingManager
 		this.addRecipe(new ItemStack(ModItems.CrazyPickaxe, 1), new Object []{"GGG", "XSX", "XSX", Character.valueOf('G'), ModItems.CrazyIngot, Character.valueOf('S'), ModItems.CrazyBar});
 		this.addRecipe(new ItemStack(ModItems.CrazyShovel, 1), new Object []{"XGX", "XSX", "XSX", Character.valueOf('G'), ModItems.CrazyIngot, Character.valueOf('S'), ModItems.CrazyBar});
 		this.addRecipe(new ItemStack(ModItems.CrazyAxe, 1), new Object []{"GGX", "GSX", "XSX", Character.valueOf('G'), ModItems.CrazyIngot, Character.valueOf('S'), ModItems.CrazyBar});
+		this.addShapelessRecipe(new ItemStack(Item.blazeRod, 2), new ItemStack(Item.blazePowder), new ItemStack(Item.stick));
 		System.out.println(this.recipes.size() + " recipes");
 
 	}

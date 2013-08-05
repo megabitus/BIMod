@@ -1,12 +1,16 @@
 package bi.bi_Items;
 
+import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
+import bi.bi_BasePackage.BaseClass;
+import bi.bi_Blocks.LittleGlowstone;
+import bi.bi_Config.Strings;
+import bi.bi_Entitys.EntityLittleGlowstone;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import bi.bi_BasePackage.BaseClass;
-import bi.bi_Config.Strings;
-import bi.bi_Helper.Reference;
-import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.item.Item;
 
 public class CrazyBar extends Item 
 {
@@ -23,5 +27,6 @@ public class CrazyBar extends Item
     {
         this.itemIcon = par1IconRegister.registerIcon(Strings.CRAZY_BAR);
     }
+
 
 }

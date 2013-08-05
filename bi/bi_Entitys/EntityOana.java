@@ -104,6 +104,9 @@ public class EntityOana extends EntityMob
 		case 1:
 			this.dropItem(ModItems.CrazyIngot.itemID, 1);
 			break;
+		case 2:
+			this.dropItem(ModItems.Orange.getMetadata(3), 1);
+			break;
 		}
 	}
 

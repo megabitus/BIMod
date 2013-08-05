@@ -46,4 +46,6 @@ public class Strings
 	public static String GLOWING_STAIR = "Stair";
 	public static final String[] ORANGE_NAMES = {"Orange", "Gold Orange", "Diamond Orange", "Poisonous Orange"};
 	public static final String[] ORANGE_ICONS = {"Orange", "GoldOrange", "DiamondOrange", "PoisonousOrange"};
+	public static String TEST = "Test";
+	public static final String LITTLE_GLOWSTONE_TE_KEY = "LittleGlowstoneTileEntity";
 }

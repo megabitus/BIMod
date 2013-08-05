@@ -45,6 +45,7 @@ public class BiIds {
 	public static int GlowingStickID = 3979;
 	public static int BananaID = 3980;
 	public static int OrangeID = 3981;
+	public static int TestID = 3982;
 	
 
 }

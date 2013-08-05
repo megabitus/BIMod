@@ -59,6 +59,7 @@ public class ConfigurationHandler {
 			BiIds.GlowingStickID = configuration.getItem(Strings.GLOWING_STICK, BiIds.GlowingStickID).getInt(BiIds.GlowingStickID) - 256;
 			BiIds.BananaID = configuration.getItem(Strings.BANANA, BiIds.BananaID).getInt(BiIds.BananaID) - 256;
 			BiIds.OrangeID = configuration.getItem(Strings.ORANGE, BiIds.OrangeID).getInt(BiIds.OrangeID) - 256;
+			BiIds.TestID = configuration.getItem(Strings.TEST, BiIds.TestID).getInt(BiIds.TestID) - 256;
 
 		}
 		catch (Exception e) {

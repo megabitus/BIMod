@@ -43,6 +43,7 @@ public class ModItems {
 	public static Item GlowingStick;
 	public static Item Banana;
 	public static Item Orange;
+	public static Item Test;
 	
 	public static void init() {
 		
@@ -68,6 +69,7 @@ public class ModItems {
 		GlowingStick = new GlowingStick(BiIds.GlowingStickID);
 		Banana = new Banana(BiIds.BananaID, 4, true);
 		Orange = new Orange(BiIds.OrangeID, 2, true);
+		Test = new Test(BiIds.TestID);
 		
 	}
 
