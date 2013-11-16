@@ -1,68 +1,50 @@
 package bi.bi_Models;
 
-import net.minecraft.client.model.ModelBase;
-import net.minecraft.client.model.ModelRenderer;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.MathHelper;
 
-public class ModelOana extends ModelBase
+@SideOnly(Side.CLIENT)
+public class ModelOana extends ModelBiped
 {
-  //fields
-    ModelRenderer Legleft;
-    ModelRenderer Legright;
-    ModelRenderer Body;
-    ModelRenderer Head;
-  
-  public ModelOana()
-  {
-    textureWidth = 64;
-    textureHeight = 32;
-    
-      Legleft = new ModelRenderer(this, 11, 21);
-      Legleft.addBox(-1F, 0F, -1F, 2, 6, 2);
-      Legleft.setRotationPoint(2F, 18F, 0F);
-      Legleft.setTextureSize(64, 32);
-      Legleft.mirror = true;
-      setRotation(Legleft, 0F, 0F, 0F);
-      Legright = new ModelRenderer(this, 29, 21);
-      Legright.addBox(-1F, 0F, -1F, 2, 6, 2);
-      Legright.setRotationPoint(-2F, 18F, 0F);
-      Legright.setTextureSize(64, 32);
-      Legright.mirror = true;
-      setRotation(Legright, 0F, 0F, 0F);
-      Body = new ModelRenderer(this, 14, 10);
-      Body.addBox(-3.5F, -3F, -2F, 7, 6, 4);
-      Body.setRotationPoint(0F, 15.16667F, 0F);
-      Body.setTextureSize(64, 32);
-      Body.mirror = true;
-      setRotation(Body, 0F, 0F, 0F);
-      Head = new ModelRenderer(this, 17, 3);
-      Head.addBox(-1.5F, -3F, -1.5F, 3, 3, 3);
-      Head.setRotationPoint(0F, 12F, 0F);
-      Head.setTextureSize(64, 32);
-      Head.mirror = true;
-      setRotation(Head, 0F, 0F, 0F);
-  }
-  
-  public void render(Entity par1Entity, float par2, float par3, float par4, float par5, float par6, float par7)
-  {
-    super.render(par1Entity, par2, par3, par4, par5, par6, par7);
-    setRotationAngles(par2, par3, par4, par5, par6, par7, par1Entity);
-    Legleft.render(par7);
-    Legright.render(par7);
-    Body.render(par7);
-    Head.render(par7);
-  }
-  
-  private void setRotation(ModelRenderer model, float x, float y, float z)
-  {
-    model.rotateAngleX = x;
-    model.rotateAngleY = y;
-    model.rotateAngleZ = z;
-  }
-  
-  
-  public void setRotationAngles(float par1, float par2, float par3, float par4, float par5, float par6, Entity par7Entity)
-  {
-    super.setRotationAngles(par1, par2, par3, par4, par5, par6, par7Entity);
-  }
+	public ModelOana()
+	{
+		this(0.0F, false);
+	}
+
+	protected ModelOana(float par1, float par2, int par3, int par4)
+	{
+		super(par1, par2, par3, par4);
+	}
+
+	public ModelOana(float par1, boolean par2)
+	{
+		super(par1, 0.0F, 64, par2 ? 32 : 64);
+	}
+
+	/**
+	 * Sets the model's various rotation angles. For bipeds, par1 and par2 are used for animating the movement of arms
+	 * and legs, where par1 represents the time(so that arms and legs swing back and forth) and par2 represents how
+	 * "far" arms and legs can swing at most.
+	 */
+	public void setRotationAngles(float par1, float par2, float par3, float par4, float par5, float par6, Entity par7Entity)
+	{
+		super.setRotationAngles(par1, par2, par3, par4, par5, par6, par7Entity);
+		float f6 = MathHelper.sin(this.onGround * (float)Math.PI);
+		float f7 = MathHelper.sin((1.0F - (1.0F - this.onGround) * (1.0F - this.onGround)) * (float)Math.PI);
+		this.bipedRightArm.rotateAngleZ = 0.0F;
+		this.bipedLeftArm.rotateAngleZ = 0.0F;
+		this.bipedRightArm.rotateAngleY = -(0.1F - f6 * 0.6F);
+		this.bipedLeftArm.rotateAngleY = 0.1F - f6 * 0.6F;
+		this.bipedRightArm.rotateAngleX = -((float)Math.PI / 2F);
+		this.bipedLeftArm.rotateAngleX = -((float)Math.PI / 2F);
+		this.bipedRightArm.rotateAngleX -= f6 * 1.2F - f7 * 0.4F;
+		this.bipedLeftArm.rotateAngleX -= f6 * 1.2F - f7 * 0.4F;
+		this.bipedRightArm.rotateAngleZ += MathHelper.cos(par3 * 0.09F) * 0.05F + 0.05F;
+		this.bipedLeftArm.rotateAngleZ -= MathHelper.cos(par3 * 0.09F) * 0.05F + 0.05F;
+		this.bipedRightArm.rotateAngleX += MathHelper.sin(par3 * 0.067F) * 0.05F;
+		this.bipedLeftArm.rotateAngleX -= MathHelper.sin(par3 * 0.067F) * 0.05F;
+	}
 }

@@ -8,7 +8,6 @@ import net.minecraft.world.World;
 import bi.bi_BasePackage.BaseClass;
 import bi.bi_Blocks.LittleGlowstone;
 import bi.bi_Config.Strings;
-import bi.bi_Entitys.EntityLittleGlowstone;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

@@ -35,7 +35,8 @@ public class ConfigurationHandler {
 			BiIds.NuggetOreID = configuration.getBlock(Strings.NUGGET_ORE, BiIds.NuggetOreID).getInt(BiIds.NuggetOreID) ;
 			BiIds.PoCID = configuration.getBlock(Strings.P_O_C, BiIds.PoCID).getInt(BiIds.PoCID) ;
 			BiIds.GlowingSpeederID = configuration.getBlock(Strings.GLOWING_SPEEDER, BiIds.GlowingSpeederID).getInt(BiIds.GlowingSpeederID) ;
-			BiIds.ClearGlassID = configuration.getBlock(Strings.CLEAR_GLASS, BiIds.ClearGlassID).getInt(BiIds.ClearGlassID) ;
+			BiIds.ClearGlassID = configuration.getBlock(Strings.CLEAR_GLASS, BiIds.ClearGlassID).getInt(BiIds.ClearGlassID);
+			BiIds.GrowerID = configuration.getBlock(Strings.GROWER, BiIds.GrowerID).getInt(BiIds.GrowerID);
 			/* Item configs */
 			BiIds.GlowstoneNuggetID = configuration.getItem(Strings.GLOWSTONE_NUGGET, BiIds.GlowstoneNuggetID).getInt(BiIds.GlowstoneNuggetID) - 256;
 			BiIds.NuggetSwordID = configuration.getItem(Strings.NUGGET_SWORD, BiIds.NuggetSwordID).getInt(BiIds.NuggetSwordID) - 256;
@@ -59,7 +60,8 @@ public class ConfigurationHandler {
 			BiIds.GlowingStickID = configuration.getItem(Strings.GLOWING_STICK, BiIds.GlowingStickID).getInt(BiIds.GlowingStickID) - 256;
 			BiIds.BananaID = configuration.getItem(Strings.BANANA, BiIds.BananaID).getInt(BiIds.BananaID) - 256;
 			BiIds.OrangeID = configuration.getItem(Strings.ORANGE, BiIds.OrangeID).getInt(BiIds.OrangeID) - 256;
-			BiIds.TestID = configuration.getItem(Strings.TEST, BiIds.TestID).getInt(BiIds.TestID) - 256;
+			BiIds.GlowingRubberID = configuration.getItem(Strings.GLOWING_RUBBER, BiIds.GlowingRubberID).getInt(BiIds.GlowingRubberID) - 256;
+			BiIds.CleanerID = configuration.getItem(Strings.CLEANER, BiIds.CleanerID).getInt(BiIds.CleanerID) - 256;
 
 		}
 		catch (Exception e) {

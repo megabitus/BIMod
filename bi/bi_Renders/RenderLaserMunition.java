@@ -87,9 +87,8 @@ public class RenderLaserMunition extends Render
     {
         this.renderArrow((EntityLaserMunition)par1Entity, par2, par4, par6, par8, par9);
     }
-
 	@Override
-	protected ResourceLocation func_110775_a(Entity entity){
+	protected ResourceLocation getEntityTexture(Entity entity) {
 		return field_110837_a;
 	}
 }

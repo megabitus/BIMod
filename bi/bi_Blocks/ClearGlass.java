@@ -14,7 +14,7 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ClearGlass extends Block 
+public class ClearGlass extends Block
 {
 	public static boolean fallInstantly = false;
 	public ClearGlass(int par1, Material par2Material, boolean b) {

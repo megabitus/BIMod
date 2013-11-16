@@ -48,4 +48,8 @@ public class Strings
 	public static final String[] ORANGE_ICONS = {"Orange", "GoldOrange", "DiamondOrange", "PoisonousOrange"};
 	public static String TEST = "Test";
 	public static final String LITTLE_GLOWSTONE_TE_KEY = "LittleGlowstoneTileEntity";
+	public static String GROWER = "Grower";
+	public static final String GROWER_KEY = "GrowerTileEntity";
+	public static String CLEANER = "Cleaner";
+	public static String GLOWING_RUBBER = "GlowingRubber";
 }

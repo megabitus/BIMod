@@ -44,6 +44,8 @@ public class ModItems {
 	public static Item Banana;
 	public static Item Orange;
 	public static Item Test;
+	public static Item Cleaner;
+	public static Item GlowingRubber;
 	
 	public static void init() {
 		
@@ -70,6 +72,8 @@ public class ModItems {
 		Banana = new Banana(BiIds.BananaID, 4, true);
 		Orange = new Orange(BiIds.OrangeID, 2, true);
 		Test = new Test(BiIds.TestID);
+		Cleaner = new Cleaner(BiIds.CleanerID);
+		GlowingRubber = new GlowingRubber(BiIds.GlowingRubberID);
 		
 	}
 

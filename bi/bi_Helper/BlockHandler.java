@@ -22,7 +22,7 @@ public class BlockHandler implements ISimpleBlockRenderingHandler
 	public boolean shouldRender3DInInventory()
 	{
 		// This is where it asks if you want the renderInventory part called or not.
-		return false; // Change to 'true' if you want the Inventory render to be called.
+		return true; // Change to 'true' if you want the Inventory render to be called.
 	}
 
 	public int getRenderId()

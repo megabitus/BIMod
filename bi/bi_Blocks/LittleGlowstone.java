@@ -8,7 +8,6 @@ import net.minecraft.util.Icon;
 import net.minecraft.world.World;
 import bi.bi_BasePackage.BaseClass;
 import bi.bi_Config.Strings;
-import bi.bi_Entitys.EntityLittleGlowstone;
 import bi.bi_Entitys.TileEntityLittleGlowstone;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -22,6 +21,7 @@ public class LittleGlowstone extends BlockContainer
 		this.setHardness(1F);
 		this.setUnlocalizedName(Strings.LITTLE_GLOWSTONE);
 		this.setLightValue(1F);
+		this.setBlockBounds(0F, 0F, 0F, 1F, 0.1F, 1F);
 	}
 	@Override
 	@SideOnly(Side.CLIENT)

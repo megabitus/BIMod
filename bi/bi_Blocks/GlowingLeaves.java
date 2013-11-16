@@ -24,11 +24,11 @@ import net.minecraftforge.common.IShearable;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class GlowingLeaves extends BlockLeavesBase implements IShearable
+public class GlowingLeaves extends Block implements IShearable
 {
 	protected GlowingLeaves(int par1)
 	{
-		super(par1, Material.leaves, false);
+		super(par1, Material.leaves);
 		this.setTickRandomly(true);
 		this.setHardness(0.2F);
 		this.setCreativeTab(BaseClass.BITab);
@@ -73,68 +73,11 @@ public class GlowingLeaves extends BlockLeavesBase implements IShearable
 	/**
 	 * Ticks the block if it's been scheduled
 	 */
-	public void updateTick(World par1World, int par2, int par3, int par4, Random par5Random)
+	public void updateTick(World par1World, int x, int y, int z, Random par5Random)
 	{
-		if (!par1World.isRemote)
-		{
-			int l = par1World.getBlockMetadata(par2, par3, par4);
-
-			if ((l & 8) != 0 && (l & 4) == 0)
-			{
-				byte b0 = 4;
-				int i1 = b0 + 1;
-				byte b1 = 32;
-				int j1 = b1 * b1;
-				int k1 = b1 / 2;
-				int l1;
-
-				if (par1World.checkChunksExist(par2 - i1, par3 - i1, par4 - i1, par2 + i1, par3 + i1, par4 + i1))
-				{
-					int i2;
-					int j2;
-					int k2;
-
-					for (l1 = -b0; l1 <= b0; ++l1)
-					{
-						for (i2 = -b0; i2 <= b0; ++i2)
-						{
-							for (j2 = -b0; j2 <= b0; ++j2)
-							{
-								k2 = par1World.getBlockId(par2 + l1, par3 + i2, par4 + j2);
-
-								Block block = Block.blocksList[k2];
-							}
-						}
-					}
-
-					for (l1 = 1; l1 <= 4; ++l1)
-					{
-						for (i2 = -b0; i2 <= b0; ++i2)
-						{
-							for (j2 = -b0; j2 <= b0; ++j2)
-							{
-								for (k2 = -b0; k2 <= b0; ++k2)
-								{
-
-
-									if (l1 >= 0)
-									{
-										par1World.setBlockMetadataWithNotify(par2, par3, par4, l & -9, 4);
-									}
-									else
-									{
-										this.removeLeaves(par1World, par2, par3, par4);
-									}
-								}
-							}
-						}
-					}
-				}
-			}
+		if(!search(par1World, x, y, z, ModBlocks.GlowingLog)){
+			removeLeaves(par1World, x, y, z);
 		}
-
-
-
 	}
 
 	private void removeLeaves(World par1World, int par2, int par3, int par4)
@@ -203,7 +146,7 @@ public class GlowingLeaves extends BlockLeavesBase implements IShearable
 
 			if ((par5 & 3) == 0 && par1World.rand.nextInt(j1) == 0)
 			{
-				this.dropBlockAsItem_do(par1World, par2, par3, par4, new ItemStack(ModItems.NuggetDust, 1, 0));
+				this.dropBlockAsItem_do(par1World, par2, par3, par4, new ItemStack(ModItems.GlowingRubber, 10, 0));
 			}
 		}
 	}
@@ -268,5 +211,25 @@ public class GlowingLeaves extends BlockLeavesBase implements IShearable
 	public boolean isLeaves(World world, int x, int y, int z)
 	{
 		return true;
+	}
+	public boolean search(World world, int x, int y, int z,Block block){
+		boolean variabila = false;
+		for (int i = x - 2; i <= x + 2; ++i)
+		{
+			for (int k = z - 2; k <= z + 2; ++k)
+			{
+				for (int j = y - 1; j <= y + 1; ++j)
+				{
+					if (i!=0 || k != 0 || j != 0)
+					{
+						if (world.getBlockId(i, j, k) == block.blockID)
+						{
+							variabila = true;
+						}
+					}
+				} 
+			}
+		} 
+		return variabila;
 	}
 }

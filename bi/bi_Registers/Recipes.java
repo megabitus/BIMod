@@ -59,12 +59,14 @@ public class Recipes {
 		GameRegistry.addRecipe(new ItemStack(ModBlocks.Stair, 4), new Object []{"NOO", "NNO", "NNN", Character.valueOf('N'), ModBlocks.GlowingPlank});
 	    GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.PoC, 3), new ItemStack(ModBlocks.GlowingLog),new ItemStack(Item.dyePowder,1,2));
 	    GameRegistry.addShapelessRecipe(new ItemStack(ModItems.GlowingStick, 4), new ItemStack(ModBlocks.GlowingPlank), new ItemStack(ModBlocks.GlowingPlank));
-	    GameRegistry.addRecipe(new ItemStack(ModBlocks.Fence, 4), new Object []{"NNN", "SSS", "SSS", Character.valueOf('S'), ModItems.GlowingStick});
+	    GameRegistry.addRecipe(new ItemStack(ModBlocks.Fence, 4), new Object []{"NNN", "SSS", "SNS", Character.valueOf('S'), ModItems.GlowingStick});
 	    GameRegistry.addRecipe(new ItemStack(ModBlocks.GlowingSpeeder, 2), new Object []{"GGG", "GPG", "GGG", Character.valueOf('G'), ModBlocks.GlowingPlank,  Character.valueOf('P'), ModBlocks.PoC});
 	    GameRegistry.addRecipe(new ItemStack(ModItems.Orange, 1, 3), new Object []{"SAS", "AOA", "SAS", Character.valueOf('A'), Item.appleRed,  Character.valueOf('O'), new ItemStack(Item.dyePowder,1,14),Character.valueOf('S'), Item.sugar});
 	    FurnaceRecipes.smelting().addSmelting(ModItems.Orange.itemID, 3, new ItemStack(ModItems.Orange), 0.5f);
 	    GameRegistry.addRecipe(new ItemStack(ModItems.Orange, 1, 1), new Object []{"SGS", "GOG", "SGS", Character.valueOf('G'), Item.ingotGold,  Character.valueOf('O'), new ItemStack(ModItems.Orange,1,0),Character.valueOf('S'), Item.sugar});
 	    GameRegistry.addRecipe(new ItemStack(ModItems.Orange, 2, 2), new Object []{"SOS", "ODO", "SOS", Character.valueOf('D'), Item.diamond,  Character.valueOf('O'), new ItemStack(ModItems.Orange,1,1),Character.valueOf('S'), Item.sugar});
+	    GameRegistry.addRecipe(new ItemStack(ModBlocks.Grower, 1), new Object []{"BBB", "CQC", "MDP", Character.valueOf('B'), new ItemStack(Item.dyePowder,1,15),  Character.valueOf('D'), Block.dirt,Character.valueOf('C'), Block.cactus,Character.valueOf('Q'), Item.diamond,Character.valueOf('M'), Item.potato,Character.valueOf('P'), Item.carrot});
+	    GameRegistry.addRecipe(new ItemStack(ModItems.Cleaner), new Object []{"IIP", "DGP", "PSP", Character.valueOf('I'), Item.ingotIron,  Character.valueOf('D'), Item.diamond,Character.valueOf('G'), ModItems.GlowstoneNugget,Character.valueOf('S'), Item.stick});
 	}
 
 }

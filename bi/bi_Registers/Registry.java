@@ -10,7 +10,7 @@ import bi.bi_BasePackage.BaseClass;
 import bi.bi_Blocks.ModBlocks;
 import bi.bi_Config.Strings;
 import bi.bi_Entitys.EntityOana;
-import bi.bi_Entitys.EntityLittleGlowstone;
+import bi.bi_Entitys.GrowerTileEntity;
 import bi.bi_Entitys.TileEntityGlowNuggetChest;
 import bi.bi_Entitys.TileEntityLittleGlowstone;
 import bi.bi_Helper.BFuelHandler;
@@ -18,6 +18,9 @@ import bi.bi_Helper.BIWorldGenerator;
 import bi.bi_Helper.BlockHandler;
 import bi.bi_Helper.WorldGenTree;
 import bi.bi_Items.ModItems;
+import bi.bi_Renders.LittleGlowstoneRender;
+import bi.bi_Renders.RenderGrower;
+import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -65,6 +68,10 @@ public class Registry {
 		LanguageRegistry.addName(ModBlocks.GlowingSpeeder, "Glowing Speeder");
 		GameRegistry.registerBlock(ModBlocks.ClearGlass, "Mod_ClearGlass");
 		LanguageRegistry.addName(ModBlocks.ClearGlass, "Clean Glass");
+		GameRegistry.registerBlock(ModBlocks.Grower, "Mod_Grower");
+		LanguageRegistry.addName(ModBlocks.Grower, "Grower");
+		GameRegistry.registerBlock(ModBlocks.Test, "Mod_Test");
+		LanguageRegistry.addName(ModBlocks.Test, "Test Block");
 		//Items
 		LanguageRegistry.addName(ModItems.GlowstoneNugget, "Glowstone Nugget"); 
 		LanguageRegistry.addName(ModItems.NuggetSword, "Nugget Sword"); 
@@ -91,6 +98,8 @@ public class Registry {
 		for(int i = 0; i < Strings.ORANGE_NAMES.length; i++){
 			LanguageRegistry.addName(new ItemStack(ModItems.Orange, 1, i), Strings.ORANGE_NAMES[i]);
 		}
+		LanguageRegistry.addName(ModItems.Cleaner, "Cutter");
+		LanguageRegistry.addName(ModItems.GlowingRubber, "Glowing Rubber");
 		//Hooks
 		ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST).addItem(new WeightedRandomChestContent(new ItemStack(ModItems.InfusedCoal),1,15,100));
 		ChestGenHooks.getInfo(ChestGenHooks.BONUS_CHEST).addItem(new WeightedRandomChestContent(new ItemStack(ModItems.InfusedCoal),1,10,100));
@@ -108,13 +117,16 @@ public class Registry {
 		ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_CROSSING).addItem(new WeightedRandomChestContent(new ItemStack(ModBlocks.LittleGlowstone),1,30,100));
 		//Others
 		LanguageRegistry.instance().addStringLocalization("entity.B&I.LaserMunition.name", "Laser Munition");
+		LanguageRegistry.instance().addStringLocalization("entity.B&I.Oana.name", "Oana");
 		GameRegistry.registerWorldGenerator(new BIWorldGenerator());
 		GameRegistry.registerWorldGenerator(new WorldGenTree());
 		GameRegistry.registerFuelHandler(new BFuelHandler());
 		RenderingRegistry.instance().registerBlockHandler(new BlockHandler());
 		GameRegistry.registerTileEntity(TileEntityGlowNuggetChest.class, "tileentitychest");
 		GameRegistry.registerTileEntity(TileEntityLittleGlowstone.class, Strings.LITTLE_GLOWSTONE_TE_KEY);
+		GameRegistry.registerTileEntity(GrowerTileEntity.class, Strings.GROWER_KEY);
 		EntityRegistry.addSpawn(EntityOana.class, 10, 2, 4, EnumCreatureType.ambient, BiomeGenBase.beach, BiomeGenBase.extremeHills, BiomeGenBase.extremeHillsEdge, BiomeGenBase.forest, BiomeGenBase.forestHills, BiomeGenBase.jungle, BiomeGenBase.jungleHills, BiomeGenBase.mushroomIsland, BiomeGenBase.mushroomIslandShore, BiomeGenBase.ocean, BiomeGenBase.plains, BiomeGenBase.river, BiomeGenBase.swampland);
+		
 		//BlocksHarvestLevel
 		MinecraftForge.setBlockHarvestLevel(ModBlocks.StormmSand, "shovel", 0);
 		MinecraftForge.setBlockHarvestLevel(ModBlocks.Crafter, "axe", 1);
@@ -129,6 +141,7 @@ public class Registry {
 		MinecraftForge.setBlockHarvestLevel(ModBlocks.GlowNuggetBlock, "pickaxe", 1);
 		MinecraftForge.setBlockHarvestLevel(ModBlocks.NuggetOre, "pickaxe", 1);
 		MinecraftForge.setBlockHarvestLevel(ModBlocks.Stair, "pickaxe", 1);
+		MinecraftForge.setBlockHarvestLevel(ModBlocks.Grower, "pickaxe", 1);
 	}
 	
 }

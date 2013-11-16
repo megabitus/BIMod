@@ -84,15 +84,15 @@ public class TileEntityGlowNuggetChestRender extends TileEntitySpecialRenderer
 
 				if (par1TileEntityChest.func_98041_l() == 1)
 				{
-					this.func_110628_a(field_110635_a);
+					this.bindTexture(field_110635_a);
 				}
 				else if (this.isChristmas)
 				{
-					this.func_110628_a(field_110635_a);
+					this.bindTexture(field_110635_a);
 				}
 				else
 				{
-					this.func_110628_a(field_110635_a);
+					this.bindTexture(field_110635_a);
 				}
 			}
 			else
@@ -101,15 +101,15 @@ public class TileEntityGlowNuggetChestRender extends TileEntitySpecialRenderer
 
 				if (par1TileEntityChest.func_98041_l() == 1)
 				{
-					this.func_110628_a(field_110634_c);
+					this.bindTexture(field_110634_c);
 				}
 				else if (this.isChristmas)
 				{
-					this.func_110628_a(field_110634_c);
+					this.bindTexture(field_110634_c);
 				}
 				else
 				{
-					this.func_110628_a(field_110634_c);
+					this.bindTexture(field_110634_c);
 				}
 			}
 			GL11.glPushMatrix();

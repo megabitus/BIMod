@@ -29,6 +29,8 @@ public class ModBlocks{
 	public static Block PoC;
 	public static Block GlowingSpeeder;
 	public static Block ClearGlass;
+	public static Block Grower;
+	public static Block Test;
 	
 	public static void init() {
 
@@ -39,7 +41,7 @@ public class ModBlocks{
 		StormmGlass = new StormmGlass(BiIds.StormmGlassID, Material.glass, false);
 		LittleGlowstone = new LittleGlowstone(BiIds.LittleGlowstoneID, 6);
 		Crafter = new Crafter(BiIds.CrafterID);
-		Fence = new BlockFence(BiIds.FenceID, "GlowNugget Fence", Material.wood).setCreativeTab(BaseClass.BITab);
+		Fence = new BlockFence(BiIds.FenceID, "GlowNugget Fence", Material.wood).setCreativeTab(BaseClass.BITab).setHardness(1F);;
 		GlowNuggetBlock = new GlowNuggetBlock(BiIds.GlowNuggetBlockID, 0);
 		Stair = new Stair(BiIds.StairID, ModBlocks.GlowNuggetBlock, 8);
 		GlowNuggetChest = new GlowNuggetChest(BiIds.GlowNuggetChestID, 0);
@@ -51,5 +53,7 @@ public class ModBlocks{
 		PoC = new PoC(BiIds.PoCID, 9);
 		GlowingSpeeder = new GlowingSpeeder(BiIds.GlowingSpeederID, 9);
 		ClearGlass = new ClearGlass(BiIds.ClearGlassID, Material.glass, false);
+		Grower = new Grower(BiIds.GrowerID);
+		Test = new Test(3986);
 	}
 }
